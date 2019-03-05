@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>wanxie</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/style/bootstrap.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/font-awesome.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/weather-icons.css" rel="stylesheet">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__PUBLIC__/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/style/demo.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/typicons.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/animate.css" rel="stylesheet">
+    <style>
+        .thumb-box{
+        position:absolute;
+        left:130px;
+        top:30px;
+        width:220px;
+        background:#fff;
+        display:none;
+        border:2px solid #ccc;
+        }
+        .thumb-box img{
+            width: 216px;
+            padding: 10px;
+        }
+        .showpic:hover+.thumb-box{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<include file="Public/head"/>
+<!-- /头部 -->
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+        <!-- Page Sidebar -->
+        <include file="Public/left"/>
+        <!-- /Page Sidebar -->
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Breadcrumb -->
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="__MODULE__/Admin/lst">系统</a>
+                    </li>
+                    <li class="active">商品模块</li>
+                </ul>
+            </div>
+            <!-- /Page Breadcrumb -->
+
+            <!-- Page Body -->
+            <div class="page-body">
+
+                <button type="button" class="btn btn-sm btn-azure btn-addon" onClick="window.location.href = '__CONTROLLER__/showadd'"> <i class="fa fa-plus"></i> Add
+                </button>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover" style="table-layout: fixed;">
+                                        <thead class="">
+                                        <tr>
+                                            <th class="text-center" width="3%">序号</th>
+                                            <th class="text-center" width="5%">商品编号</th>
+                                            <th class="text-center" width="6%">顶级分类</th>
+                                            <th class="text-center" width="6%">二级分类</th>
+                                            <th class="text-center" width="6%">商品品牌</th>
+                                            <th class="text-center" width="10%">商品名称</th>
+                                            <th class="text-center" width="7%">商品价格</th>
+                                            <th class="text-center" width="12%">商品简介</th>
+                                            <th class="text-center" width="5%">商品库存</th>
+                                            <th class="text-center" width="5%">是否显示</th>
+                                            <th class="text-center" width="5%">是否推荐</th>
+                                            <th class="text-center" width="10%">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <volist name="allproduct" id="p">
+                                            <tr>
+                                                <td align="center">{$i}</td>
+                                                <td align="center">{$p.productid}</td>
+                                                <td align="center">{$p.catename}</td>
+                                                <td align="center">{$p.typename}</td>
+                                                <td align="center">{$p.brandname}</td>
+                                                <td align="center" style="position: relative">
+                                                    {$p.productname} <span  class="green thumb showpic"  style="cursor:pointer;">[图]</span>&nbsp;
+                                                    <div class="thumb-box">
+                                                        <img src="__ROOT__{$p.productimg}">
+                                                    </div>
+
+                                                </td>
+                                                <td align="center">¥{$p.productprice}</td>
+                                                <td align="center" title="{$p.productdetail}" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{$p.productdetail}</td>
+                                                <td align="center">{$p.productcount}件</td>
+                                                <td align="center">
+                                                    <if condition="$p.isshow eq 0"><span class="red">未显示</span>
+                                                        <elseif condition="$p.isshow eq 1"/><span class="green">已显示</span>
+                                                    </if>
+                                                </td>
+                                                <td align="center">
+                                                    <if condition="$p.isrecommend eq 0"><span class="red">未推荐</span>
+                                                        <elseif condition="$p.isrecommend eq 1"/><span class="green">已推荐</span>
+                                                    </if>
+                                                </td>
+
+
+                                                <td align="center">
+                                                    <a href="updateproduct?productid={$p.productid}" class="btn btn-primary btn-sm shiny">
+                                                        <i class="fa fa-edit"></i> 编辑
+                                                    </a>
+                                                    <a  href="delproduct?productid={$p.productid}" onclick="return confirm('确实要删除吗');" class="btn btn-danger btn-sm shiny">
+                                                        <i class="fa fa-trash-o"></i> 删除
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </volist>
+                                        </tbody>
+                                    </table>
+
+                                    <!--分页-->
+                                    <div style="width: 100%; height: 20px" ></div>
+                                    <nav aria-label="Page navigation" style="text-align: center; z-index: -1">
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="showproduct?page=1" aria-label="Previous">
+                                                    <span aria-hidden="true">首页</span>
+                                                </a>
+                                            </li>
+
+                                            <for start="1" end="$pages+1" >
+                                                <li><a href="showproduct?page={$i}">{$i}</a></li>
+                                            </for>
+
+                                            <li>
+                                                <a href="showproduct?page={$pages}" aria-label="Next">
+                                                    <span aria-hidden="true">末页</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Body -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+</div>
+
+<!--Basic Scripts-->
+<script src="__PUBLIC__/style/jquery_002.js"></script>
+<script src="__PUBLIC__/style/bootstrap.js"></script>
+<script src="__PUBLIC__/style/jquery.js"></script>
+<!--Beyond Scripts-->
+<script src="__PUBLIC__/style/beyond.js"></script>
+
+
+
+</body></html>

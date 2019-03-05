@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wanxie帮助中心页面</title>
+    <style>
+        .bigbox{
+            width: 100%;
+        }
+        .main{
+            width: 100%;
+            margin-bottom: -10px;
+            position: relative;
+        }
+        button{
+            width: 12.4%;
+            height: 60px;
+            background-color: #ce3d3a;
+            position: absolute;
+            cursor: pointer;
+        }
+        .btn1{
+            top: 50%;
+            left: 33%;
+        }
+        .btn2{
+            top: 50%;
+            right: 33%;
+        }
+        button>a{
+            width: 8.15%;
+            height: 36px;
+            font-size: 36px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .main-span{
+            width: 14.366%;
+            height: 35px;
+            position: absolute;
+            bottom: 25%;
+            left: 44%;
+        }
+        .main-span>a{
+            text-decoration: none;
+            font-size: 36px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+<div class="bigbox">
+    <!--头部-->
+    <include file="Public/header" />
+    <!--头部-->
+    <div class="main">
+        <button class="btn1"><a href="#">联系客服</a></button>
+        <button class="btn2"><a href="#">加入我们</a></button>
+        <span class="main-span"><a href="#">WanXie@.com</a></span>
+        <img width="100%" src="__PUBLIC__/images/help/main.png"/>
+    </div>
+    <!--尾部-->
+    <include file="Public/footer" />
+    <!--尾部-->
+</div>
+</body>
+</html>

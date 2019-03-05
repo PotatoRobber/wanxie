@@ -1,0 +1,320 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/zxx/wanxie/Public/tab/css/jquery.cardtabs.css'>
+    <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="/zxx/wanxie/Public/tab/js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script type='text/javascript' src='/zxx/wanxie/Public/tab/js/jquery.cardtabs.js'></script>
+
+
+    <style>
+        body{
+
+            width: 100%;
+        }
+        ul{
+            list-style: none;
+        }
+        .main-container{
+            position: relative;
+            width: 73%;
+            border: 1px solid orangered;
+            margin: 0 auto;
+            /*margin-top: 5px;*/
+        }
+        .littleNav{
+            width: 100%;
+            height: 25px;
+            border: 1px solid orangered;
+            line-height: 25px;
+        }
+        .littleNav>ul{
+            list-style: none;
+        }
+        .littleNav>ul li{
+            float: left;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .Rarrow{
+            float: left;
+            margin: 0 10px;
+        }
+
+        .littleNav a,span{
+            text-decoration: none;
+            color: #ce3d3a;
+            font-size: 14px;
+
+        }
+        hr{
+            width: 100%;
+            border: 0.7px solid #d9dbdb;
+        }
+        .topPart{
+            height:700px ;
+        }
+        .leftPart{
+            border: 0.7px solid #d9dbdb;
+            display: inline-block;
+            width: 60%;
+        }
+        .rightPart{
+            border: 0.7px solid #d9dbdb;
+            display: inline-block;
+            width: 39%;
+        }
+        .photoList{
+            display: inline-block;
+            margin-top: 80px;
+            margin-left: 30px;
+
+        }
+        .photoList li{
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+        }
+        .photoList li:hover{
+            border: 1px solid #ce3d3a;
+        }
+        .bigPhoto{
+            display: inline-block;
+            margin-top: 80px;
+            margin-right: 50px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/zxx/wanxie/Public/css/headerStyle.css">
+</head>
+
+<div class="header">
+    <div class="top">
+        <div class="options">
+            <a class="login">登录/</a><a>注册</a>
+            <a>订单</a>
+            <a>收藏</a>
+            <a>帮助中心</a>
+        </div>
+    </div>
+    <div class="bottom">
+          <div class="logo">
+            <img src="/zxx/wanxie/Public/images/logo.png"/>
+          </div>
+
+        <div class="nav">
+            <a href="" class="active">首页</a>
+            <a href="">男鞋</a>
+            <a href="">女鞋</a>
+            <a href="">私人订制</a>
+            <a href="">WanXie APP</a>
+        </div>
+
+        <div class="search">
+            <input type="text" name="search"><button>搜索</button>
+        </div>
+    </div>
+</div>
+<hr>
+
+    <div class="main-container">
+        <div class="littleNav">
+            <ul>
+                <a href="#"><li>男鞋</li></a><span class="Rarrow">&gt;</span>
+                <a href="#"><li>篮球鞋</li></a><span class="Rarrow">&gt;</span>
+                <a href="#"><li>KYRIE 4 EP</li></a>
+            </ul>
+        </div>
+        <div class="topPart">
+            <div class="leftPart">
+                <ul class="photoList">
+                    <li>
+                        <img src="/zxx/wanxie/Public/images/Detail/pic10.png" width="70px"/>
+                    </li>
+                    <li>
+                        <img src="/zxx/wanxie/Public/images/Detail/pic12.png" width="70px"/>
+                    </li>
+                    <li>
+                        <img src="/zxx/wanxie/Public/images/Detail/pic10.png" width="70px"/>
+                    </li>
+                    <li>
+                        <img src="/zxx/wanxie/Public/images/Detail/pic12.png" width="70px"/>
+                    </li>
+                    <li>
+                        <img src="/zxx/wanxie/Public/images/Detail/pic10.png" width="70px"/>
+                    </li>
+                </ul>
+                <div class="bigPhoto">
+                    <img src="/zxx/wanxie/Public/images/Detail/pic10.png" width="500px" height="430px"/>
+                </div>
+
+            </div>
+            <div class="rightPart">
+                <div class="commodityTitle">KYRIE 4 EP</div>
+                <div class="s-commodityTitle">男子篮球鞋</div>
+                <div class="commodityPrice"><span>￥</span><span>899</span></div>
+                <div class="commodityActivity">
+                    <ul>
+                        <li><span>免运费</span><span>免运费</span></li>
+                        <li><span>满减</span><span>满699-20元</span></li>
+                        <li><span>满减</span><span>满1400-200元</span></li>
+                    </ul>
+                </div>
+                <div class="commodityColor">
+                    <div>颜色</div>
+                    <ul>
+                        <li>黑色</li>
+                    </ul>
+                </div>
+                <div class="commodityRule">
+                    <div>尺码</div>
+                    <ul>
+                        <li>40</li>
+                        <li>40.5</li>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>42.5</li>
+                        <li>43</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>数量</span>
+                    <input type="text">
+                </div>
+
+
+            </div>
+        </div>
+        <div class="commodityCard">
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+
+
+            <div class="container" style="width:960px;background:#fff;margin:20px auto;padding:20px;">
+                <div class='tabsholder1'>
+                    <div data-tab="商品详情">
+                        Eat a plant, kill a hand sit and stare so stare out the window for lick arm hair. Then cats take over the world. Purr with tail in the air. Chirp at birds. Russian blue toy mouse squeak roll over so eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap and find something else more interesting, so immediately regret falling into bathtub, purr for no reason, roll over and sun my belly.<br /><br /> Mesmerizing birds hiss and stare at nothing then run suddenly away hide when guests come over if it fits, i sits for loves cheeseburgers but rub whiskers on bare skin act innocent and tuxedo cats always looking dapper. I am the best sit in window and stare oooh, a bird, yum and chase ball of string and my left donut is missing, as is my right climb leg. Hate dog swat turds around the house claw drapes burrow under covers, but lie on your belly and purr when you are asleep. Climb leg going to catch the red dot today going to catch the red dot today scratch the furniture and brown cats with pink ears. Cough hairball on conveniently placed pants pelt around the house and up and down stairs chasing phantoms, or play riveting piece on synthesizer keyboard. Meow meow. Destroy couch. Meowwww.
+                    </div>
+                    <div data-tab="用户评价">
+                        Poke single-origin coffee chartreuse venmo seitan letterpress, sriracha hammock hot chicken cold-pressed church-key. Next level listicle taiyaki, heirloom mixtape literally bushwick keffiyeh narwhal etsy post-ironic jianbing ennui unicorn. Ugh schlitz hell of celiac put a bird on it. Post-ironic butcher everyday carry, iPhone af shaman cronut asymmetrical leggings hoodie vice air plant +1 keytar 3 wolf moon. 90's post-ironic cold-pressed succulents master cleanse. Jianbing neutra franzen, gochujang mumblecore heirloom coloring book literally pok pok 3 wolf moon brunch offal. Raw denim taxidermy lumbersexual, paleo venmo thundercats retro pitchfork chicharrones raclette forage banjo authentic ennui.
+                        <br /><br />
+                        Vaporware farm-to-table glossier brooklyn jean shorts retro green juice slow-carb. Enamel pin snackwave hexagon knausgaard. Gluten-free cloud bread raclette bespoke, roof party art party meh adaptogen pok pok try-hard. Mumblecore aesthetic occupy, schlitz knausgaard live-edge ugh authentic fashion axe vape mixtape pork belly tacos. Bushwick YOLO hashtag, live-edge jean shorts crucifix hexagon jianbing street art food truck semiotics. Deep v food truck fap roof party ennui. Mixtape vaporware shaman pickled snackwave YOLO.
+                    </div>
+                </div>
+            </div>
+
+
+
+        <script type='text/javascript'>
+            $(function () {
+                $('.tabsholder1').cardTabs();
+                $('.tabsholder2').cardTabs({theme: 'inset'});
+                $('.tabsholder3').cardTabs({theme: 'graygreen'});
+                $('.tabsholder4').cardTabs({theme: 'wiki'});
+
+                //点击小图，换大图换相应的src
+                $('.photoList>li>img').click(function () {
+                    var clickSrc = this.src;
+
+                    $('.bigPhoto>img').attr('src',clickSrc);
+                });
+
+
+
+
+
+
+            });
+
+        </script>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/zxx/wanxie/Public/css/headerStyle.css">
+</head>
+
+<footer class="full_footer floating_footer" id="footer">
+    <div class="nav_links">
+        <div class="nav_block">
+            <ul>
+                <li class="footer_category_title">关于 wanxie</li>
+                <li><a href="#" title="关于我们" target="_blank">关于我们</a></li>
+                <li><a href="#" title="新闻" target="_blank">新闻</a></li>
+                <li><a href="#" title="合作伙伴" target="_blank">合作伙伴</a></li>
+                <li><a href="#" title="招贤纳士" target="_blank">招贤纳士</a></li>
+                <li><a href="#" title="新品预览" target="_blank">新品预览</a></li>
+            </ul>
+        </div>
+        <div class="nav_block">
+            <ul>
+                <li class="footer_category_title">帮助中心</li>
+                <li><a href="#" title="获取帮助" target="_blank">获取帮助</a></li>
+                <li><a href="#" title="订单状态" target="_blank">订单状态</a></li>
+                <li><a href="#" title="配送方式" target="_blank">配送方式</a></li>
+                <li><a href="#" title="退换贷" target="_blank">退换贷</a></li>
+                <li><a href="#" title="付款选项" target="_blank">付款选项</a></li>
+                <li><a href="#" title="联系我们" target="_blank">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="nav_block" >
+            <ul>
+                <li class="footer_category_title">了解更多</li>
+                <li><a href="#" title="电子礼品卡" target="_blank">电子礼品卡</a></li>
+                <li><a href="#" title="附近商店" target="_blank">附近商店</a></li>
+                <li><a href="#" title="订阅电子邮件" target="_blank">订阅电子邮件</a></li>
+                <li><a href="#" title="注册NIKE会员" target="_blank">注册NIKE会员</a></li>
+                <li><a href="#" title="网站反馈" target="_blank">网站反馈</a></li>
+            </ul>
+        </div>
+        <div class="nav_block" style="width: 16%">
+            <div>
+                <span style="font-size: 20px;display: block;color: rgba(255,255,255,0.80);text-align: center">下载WanXie官方APP</span>
+                <span style="font-size: 12px;display: block;color: rgba(255,255,255,0.80);margin-top: 20px;text-align: center">进一步了解我们</span>
+            </div>
+                <img style="margin:20px auto 0 auto;display: block" class="footer_logo" alt="www.wanxie.com" src="/zxx/wanxie/Public/images/code.png">
+        </div>
+        <div class="nav_block">
+            <ul>
+                <li class="footer_category_title">客服中心</li>
+                <li>
+                    <a class="tel" ><img  src="/zxx/wanxie/Public/images/tel.png"><span class="contactSpan">438-438-4388</span></a>
+                    <a class="tel" ><img  src="/zxx/wanxie/Public/images/wechat.png"><span class="contactSpan">gao134969</span></a>
+                    <a class="tel" ><img  src="/zxx/wanxie/Public/images/weibo.png"><span class="contactSpan">蜡笔小新</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="more">
+        <img src="/zxx/wanxie/Public/images/more.png" alt="">
+    </div>
+</footer>
+</body>
+</html>

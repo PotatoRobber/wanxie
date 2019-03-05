@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head>
+    <head>
+         <meta charset="utf-8">
+         <title>wanxie首页</title>
+         <link rel="stylesheet" href="__PUBLIC__/css/font-awesome.css">
+         <link rel="stylesheet" href="__PUBLIC__/css/indexStyle.css">
+         <script src="__PUBLIC__/js/jquery.2.2.2.min.js"></script>
+         <script src="__PUBLIC__/js/index-js.js"></script>
+    </head>
+<body id="pagetop" >
+<div class="erupt-box">
+    <div class="erupt">
+        <input class="close" type="image" src="__PUBLIC__/images/弹窗图片/close.png">
+        <img src="__PUBLIC__/images/弹窗图片/erupt.png" width="100%"/>
+        <a href="#" class="buy">前往抢购</a>
+    </div>
+</div>
+<!--头部-->
+<include file="Public/header" />
+<!--头部-->
+
+<!--banner-top-->
+<div class="banner-top">
+    <a href="#"><img src="__PUBLIC__/images/首页图片/index1.png" width="100%"></a>
+</div>
+
+<div class="new-shoes-container">
+    <div class="new-shoes-group">
+        <div class="new-shoes-text1">新品球鞋</div>
+        <div class="new-shoes-text2">NEW SHOES</div>
+        <volist name="newproducts" id="n">
+          <div class="new-shoes-grid">
+             <div class="new-shoes-pic">
+                 <a href="../Detail/Detail?productid={$n.productid}"><img src="__ROOT__{$n.productimg}" width="100%" height="240px" ></a>
+               </div>
+               <div class="new-shoes-name">
+                   <a href="../Detail/Detail?productid={$n.productid}" class="spf">{$n.productname}</a>
+               </div>
+              <div class="new-shoes-type simsun">
+                  {$n.catename}&nbsp;{$n.typename}
+              </div>
+              <div class="new-shoes-price font-18px-333">
+                  ¥{$n.productprice}
+              </div>
+          </div>
+        </volist>
+    </div>
+</div>
+
+<div class="tool-bar">
+    <ul class="tools">
+        <li><a class="cart" href="cart"><img src="__PUBLIC__/images/首页图片/shape3.png"></a></li>
+        <li><a class="contact" href="../HelpCenter/index"><img src="__PUBLIC__/images/首页图片/shape1.png"></a></li>
+        <li><a class="backtop" href="#pagetop"><img src="__PUBLIC__/images/首页图片/shape2.png"></a></li>
+    </ul>
+</div>
+<!--banner-top-->
+
+<!--banner-middle-->
+<div class="banner-middle">
+    <a href="#"><img src="__PUBLIC__/images/首页图片/index2.png" width="100%"/></a>
+</div>
+
+<div class="hot-shoes-container">
+    <div class="hot-shoes-group">
+        <div class="hot-shoes-text1">畅销商品</div>
+        <div class="hot-shoes-text2">BEST SELLER</div>
+        <volist name="hotproducts" id="n">
+            <div class="hot-shoes-grid">
+                <div class="new-shoes-pic">
+                    <a href="../Detail/Detail?productid={$n.productid}"><img src="__ROOT__{$n.productimg}" width="100%" height="240px" ></a>
+                </div>
+                <div class="new-shoes-name">
+                    <a href="../Detail/Detail?productid={$n.productid}" class="spf">{$n.productname}</a>
+                </div>
+                <div class="new-shoes-type simsun">
+                    {$n.catename}&nbsp;{$n.typename}
+                </div>
+                <div class="new-shoes-price font-18px-333">
+                    ¥{$n.productprice}
+                </div>
+            </div>
+        </volist>
+    </div>
+</div>
+<!--banner-middle-->
+
+<!--banner-bottom-->
+<div class="banner-bottom">
+    <img src="__PUBLIC__/images/首页图片/index3.png" width="100%"/>
+    <button class="btn">开始定制<span class="fa-chevron-circle-down"></span></button>
+</div>
+<!--banner-bottom-->
+
+<!--底部-->
+<include file="Public/footer"/>
+<!--底部-->
+</body>
+</html>
+<script>
+    $(function () {
+        $(".index").css("color","#c53e3b");
+    })
+</script>

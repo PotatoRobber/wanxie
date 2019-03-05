@@ -1,0 +1,59 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            display: inline-block;
+            width: 120px;
+            padding: 5px 0;
+            text-align: center;
+            margin: 0 10px 0 0;
+            background-color: #2a2a2a;
+            text-decoration: none;
+            color: whitesmoke;
+        }
+    </style>
+    <script type="text/javascript" src="/zxx/wanxie/Public/js/jquery.2.2.2.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+               url: "havenofinish",
+               type:'get',
+               success:function (result) {
+                   $("#no").text("("+result+")");
+               }
+            });
+
+            $.ajax({
+                url: "wait",
+                type:'get',
+                success:function (result) {
+                    $("#wait").text("("+result+")");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<a href="waitmygoods" target="theframe" id="a">待收货<span id="wait"></span></a>
+<a href="waittopay" target="theframe" id="b">待付款<span id="no"></span></a>
+<iframe width="100%" height="550px" name="theframe">
+
+</iframe>
+</body>
+</html>
+<script>
+    $(function () {
+        $("#a").click(function () {
+            $("#b").css({"color":"#ffffff","backgroundColor":"#000000"});
+            $("#a").css({"color":"#ffffff","backgroundColor":"#c53e3b"});
+        });
+        $("#b").click(function () {
+            $("#a").css({"color":"#ffffff","backgroundColor":"#000000"});
+            $("#b").css({"color":"#ffffff","backgroundColor":"#c53e3b"});
+        });
+
+    })
+</script>

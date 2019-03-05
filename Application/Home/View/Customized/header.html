@@ -1,0 +1,36 @@
+
+<head>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/headerStyle.css">
+
+    <script src="__PUBLIC__/js/header-js.js"></script>
+
+</head>
+
+<div class="header">
+    <div class="top">
+        <div id="options">
+            <a href="../Userinfo/userlogin" class="login"><span class="denglv">登录</span><span id="user" style="display: none">欢迎,{$Think.session.user.username}</span></a><span id="divide" style="color: white">&nbsp;/&nbsp;</span><a id="register" href="../Register/Register">注册</a>
+            <a id="d">订单</a>
+            <a>收藏</a>
+            <a>帮助中心</a>
+            <a href="../Userinfo/loginout" id="exit" style="visibility: hidden" onclick="return confirm('确认注销登录吗？')">退出登录</a>
+        </div>
+    </div>
+    <div class="bottom">
+          <div class="logo">
+            <img src="__PUBLIC__/images/logo.png"/>
+          </div>
+
+        <div id="nav">
+            <a href="../Index/index" class="active">首页</a>
+            <a href="../Index/fenlei?catename=男鞋">男鞋</a>
+            <a href="../Index/fenlei?catename=女鞋">女鞋</a>
+            <a href=" ../Customized/Customized">私人订制</a>
+            <a href="">WanXie APP</a>
+        </div>
+
+        <div class="search">
+            <input id="search-box" type="text" name="search"/><input type="submit" id="button" value="搜索">
+        </div>
+    </div>
+</div>

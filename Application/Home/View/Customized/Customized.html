@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>私人订制</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        .customizedBanner{
+            width: 100%;
+        }
+        .customizedBanner>img{
+            width: 100%;
+            display: block;
+        }
+        .secondFloor{
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-color: #e6e8e8;
+            text-align: center;
+        }
+        .secondFloor>img{
+            margin-top: 5%;
+        }
+        .sm-search{
+            width: 26%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .sm-search input{
+            border: 1px #c53e3b solid;
+            width: 55%;
+            height: 30px;
+            outline: none;
+            font-size: 16px;
+            text-indent: 5px;
+            vertical-align: middle;
+        }
+        .sm-search button{
+            width: 13%;
+            height: 32.1px;
+            color: #FFFFFF;
+            background-color: #c53e3b;
+            border: none;
+            outline: none;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .bigLunboCard{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+
+        }
+        .lunboCard{
+            display: inline-block;
+            width: 21%;
+            height: 80px;
+            /*border: 1px solid sandybrown;*/
+            line-height: 80px;
+            text-align: center;
+            font-size: 23px;
+        }
+        .thirdFloor{
+            width: 100%;
+            height: 800px;
+            /*子元素水平居中*/
+            justify-content:center;
+            /*子元素垂直居中*/
+            align-items:center;
+            /*flex布局,写在要居中元素的父元素*/
+            display:-webkit-flex;
+        }
+
+        .bigLunboCard>div{
+            display: inline-block;
+
+
+        }
+        .bigLunbo{
+            width: 80%;
+            height: 520px;
+            margin:  auto;
+
+
+        }
+        .forthFloor{
+            width: 100%;
+            height: 350px;
+            background-color: #e6e8e8;
+            text-align: center;
+            line-height: 370px;
+        }
+        .fifthFloor{
+            width: 100%;
+        }
+        .fifthFloor img{
+            display: block;
+            width: 100%;
+        }
+        /*轮播*/
+        #carousel {
+            width:100%;
+            /* border:1px solid #222; */
+            /*height:300px;*/
+
+            clear:both;
+            overflow:hidden;
+            background:#FFF;
+            height: 500px;
+            margin: 0 auto;
+        }
+        #carousel img {
+            visibility:hidden; /* hide images until carousel can handle them */
+            cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+            width: 50%;
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+        }
+        .htmleaf-container{
+            width: 100%;
+        }
+        #lunboCard1{
+            background: white;
+        }
+        .lArrow{
+            position: absolute;
+            top: 42%;
+            left: 3%;
+            z-index: 2;
+        }
+        .rArrow{
+            position: absolute;
+            top: 42%;
+            right: 3%;
+            z-index: 2;
+        }
+
+    </style>
+    <!--<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/lunbo/css/htmleaf-demo.css">-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="__PUBLIC__/lunbo/js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script type="text/javascript" src="__PUBLIC__/lunbo/js/jquery.waterwheelCarousel.js"></script>
+</head>
+<body>
+        <include file="Customized/header"/>
+        <script>
+            $(function () {
+               $(".cus").css("color","#ce3d3a");
+            });
+        </script>
+
+        <div class="customizedBanner">
+            <img src="__PUBLIC__/images/Customized/pic1.png"/>
+        </div>
+
+        <div class="secondFloor">
+            <img src="__PUBLIC__/images/Customized/pic2.png"/>
+            <div class="sm-search">
+                <form action="#">
+                    <input type="text" name="search"><button>搜索</button>
+                </form>
+            </div>
+            <div class="bigLunboCard"><div class="lunboCard" id="lunboCard3">篮球鞋</div><div class="lunboCard" id="lunboCard1">跑鞋</div><div class="lunboCard" id="lunboCard2">休闲鞋</div></div>
+        </div>
+        <div class="thirdFloor">
+            <div class="bigLunbo">
+                <!--<div class="htmleaf-container">-->
+                    <div class="container">
+                        <div class="lArrow arrow fa fa-chevron-left fa-4x"></div>
+                        <div class="rArrow arrow fa fa-chevron-right fa-4x"></div>
+                        <div id="carousel">
+                            <img src="__PUBLIC__/images/Customized/pic4.png" id="item-1"/>
+                            <img src="__PUBLIC__/images/Customized/pic10.png" id="item-2"/>
+                            <img src="__PUBLIC__/images/Customized/pic11.png" id="item-3"/>
+                        </div>
+                        <br>
+
+                    </div>
+
+                <!--</div>-->
+
+
+            </div>
+
+        </div>
+        <div class="forthFloor">
+            <img src="__PUBLIC__/images/Customized/pic7.png"/>
+        </div>
+        <div class="fifthFloor">
+            <img src="__PUBLIC__/images/Customized/pic3.png"/>
+        </div>
+
+        <include file="Public/footer"/>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+            separation:450,
+            // autoPlay:300
+            movingToCenter: function ($item) {
+                // $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '');
+                var centerID =  $item.attr('id');
+                if(centerID==="item-1"){
+                    $('#lunboCard2').css("background","#e6e8e8");
+                    $('#lunboCard3').css("background","#e6e8e8");
+                    $('#lunboCard1').css("background","#fff");
+                }else if (centerID==="item-2"){
+                    $('#lunboCard1').css("background","#e6e8e8");
+                    $('#lunboCard3').css("background","#e6e8e8");
+                    $('#lunboCard2').css("background","#fff");
+                }else {
+                    $('#lunboCard1').css("background","#e6e8e8");
+                    $('#lunboCard2').css("background","#e6e8e8");
+                    $('#lunboCard3').css("background","#fff");
+                }
+            },
+            });
+        $('#prev').bind('click', function () {
+            carousel.prev();
+            return false
+        });
+        $('#next').bind('click', function () {
+            carousel.next();
+            return false;
+        });
+        $('#reload').bind('click', function () {
+            newOptions = eval("(" + $('#newoptions').val() + ")");
+            carousel.reload(newOptions);
+            return false;
+        });
+
+
+    });
+</script>

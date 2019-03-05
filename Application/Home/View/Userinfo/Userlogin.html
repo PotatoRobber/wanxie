@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        .registerBg{
+            width: 100%;
+            position: relative;
+        }
+        .container{
+            width: 100%;
+        }
+        .row{
+            width: 100%;
+        }
+        .registerBg img{
+            width: 100%;
+            display: block;
+        }
+        .regBox{
+            width: 25.21%;
+            height: 500px;
+            border: 1px solid white;
+            position: absolute;
+            top: 5%;
+            left: 35%;
+            background: #fff;
+            border-radius: 4px;
+
+        }
+        .text-wel{
+            height: 17px;
+            width: 20%;
+            color: black;
+            font-size: 16px;
+            font-family: "Microsoft Himalaya";
+
+        }
+        .textLogo{
+            width: 46%;
+            height: 24px;
+            display: inline-block;
+        }
+        .smallRegbox{
+            width: 70%;
+            height: 330px;
+            margin: 0 auto;
+            margin-top: 80px;
+            /*border: 1px solid orangered;*/
+        }
+        .getCode{
+            display: inline-block;
+            width: 35%;
+            height: 32px;
+            border: 1px solid orangered;
+            position: absolute;
+            right: -1%;
+            top: 19.5%;
+            background: #ce3d3a;
+            box-sizing: content-box;
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            line-height: 32px;
+        }
+        .smallRegbox a{
+            text-decoration: none;
+        }
+        .smallRegbox a:link{
+            color: #333333;
+        }
+        .smallRegbox a:visited {
+            color: #111111;
+        }
+        .reg-1-row{
+            text-align: center;
+        }
+        .fullinput{
+            width: 100%;
+            position: relative;
+        }
+        .reginput{
+            height: 30px;
+            margin: 10px 0;
+        }
+        .phoneCode{
+            width: 65%;
+        }
+        .regNow{
+            height: 35px;
+            background: #ce3d3a;
+            border-radius: 4px;
+            border: 1px solid #ce3d3a;
+            color: #fff;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+        .toLogin{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .bgimg{
+            height: 100%;
+        }
+
+
+
+
+
+
+    </style>
+    <!--<link rel="stylesheet" href="../../../../Public/js/bootstrap-3.3.7-dist/css/bootstrap.css">-->
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <include file="Public/header"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="registerBg col-md-12">
+            <div class="col-md-3 regBox">
+                <div class="smallRegbox">
+                    <div class="reg-1-row">
+                        <span class="text-wel">欢迎登录&nbsp;&nbsp;&nbsp;</span>
+                        <div class="textLogo">
+                            <img  src="__PUBLIC__/images/Register/textlogo.png"/>
+                        </div>
+                    </div>
+                    <form class="regForm" method="post" action="checklogin" >
+                        <input type="text" name="username" placeholder="&nbsp;用户名" class="fullinput reginput">
+                        <input type="password" name="userpsw" placeholder="&nbsp;密码" class="fullinput reginput">
+                        <div class="fullinput"><input type="text" placeholder="&nbsp;手机验证码" class="phoneCode reginput"><div class="getCode">获取验证码</div></div>
+
+                        <input type="submit" value="立即登录" class="fullinput regNow">
+                    </form>
+                    <div class="toLogin"><a href="../Register/Register">尚无账号，立即注册</a></div>
+                </div>
+            </div>
+            <img class="bgimg" src="__PUBLIC__/images/Register/registerbg.png"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <include file="Public/footer"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

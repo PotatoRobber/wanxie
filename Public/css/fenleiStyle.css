@@ -1,0 +1,140 @@
+#a,#type{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#a:hover{
+    color: #c53e3b;
+}
+
+#type:hover{
+    color: #c53e3b;
+}
+
+.spf{
+    font-size: 18px;
+    color: #333333;
+}
+.simsun{
+    font-family: SimSun-ExtB;
+    font-size: 14px;
+    color: #a19e9e;
+}
+.font-18px-333{
+    font-size: 18px;
+    color: #333333;
+}
+.font-14px-888{
+    font-size: 14px;
+    color: #888888;
+}
+.mycontainer{
+    width: 100%;
+    border-top: 1px solid #d9dbdb;
+    height: 1000px;
+}
+.container-left,.container-right{
+float: left;
+}
+.container-left{
+    width: 15.8%;
+}
+.container-right{
+    width: 82.8%;
+    height: 1000px;
+}
+.content-left{
+    width: 85%;
+    margin: 20px auto 0 auto;
+}
+.text-left1{
+    padding: 10px 0;
+    border-bottom: 2px solid #d9dbdb;
+}
+.text-left2{
+    padding: 10px 0;
+    border-bottom: 1px solid #d9dbdb;
+}
+.text-left3{
+    padding: 15px 0 10px 0;
+}
+.price input{
+    height: 20px;
+    width: 55px;
+    outline: none;
+    text-indent: 5px;
+}
+.brand{
+    width: 100%;
+}
+
+/*右边css*/
+.shoes-name{
+    margin-top: 12px;
+}
+.shoes-price{
+    margin-top: 6px;
+}
+.shoes-type{
+    margin-top: 6px;
+}
+.shoes-grid{
+    width: 18.3%;
+    height: 340px;
+    float: left;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+.shoes-grid:not(:nth-child(5n)){
+    margin-right: 1.5%;
+}
+.shoes-group{
+    width: 82.3%;
+    height: 700px;
+    margin-left: 2.8%;
+}
+.left-title{
+    width:80.3%;;
+    margin-left: 2.8%;
+    margin-top: 35px;
+    height: 80px;
+    line-height: 80px;
+}
+.left-text{
+    float: left;
+}
+.right-text{
+    float: right;
+}
+
+.pagination li span{
+    color: rgba(49, 49, 49, 0.96);
+}
+
+.pagination li a{
+    color: rgba(49, 49, 49, 0.96);
+}
+.tool-bar{
+    width: 3%;
+    height: 200px;
+    position: fixed;
+    right: 2%;
+    top: 43.5%;
+    z-index: 99;
+}
+li{
+    list-style: none;
+}
+.tools a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #c53e3b;
+    cursor: pointer;
+    margin: 0 auto 2px auto;
+}
+.tools .backtop{
+    background-color: #191919;
+}

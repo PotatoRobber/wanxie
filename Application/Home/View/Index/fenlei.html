@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/fenleiStyle.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+    <script src="__PUBLIC__/js/jquery.2.2.2.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/js/fenlei-js.js"></script>
+    <script>
+        // var location2 = location.href;
+        // console.log(location2);
+        // var str = location2.substring(location.length-3);
+        // console.log(str);
+        // $(function(){
+        //
+        //     $("#nav a:nth-child(2)").css('color','#');
+        // })
+    </script>
+
+</head>
+<body id="pagetop">
+<!--头部-->
+<include file="Public/header"/>
+<!--头部-->
+<div class="mycontainer">
+    <div class="container-left">
+        <div class="content-left">
+                <div id="catename" class="text-left1 font-18px-333">{$catename}</div>
+            <div class="brand">
+                <volist name="branddatas" id="b">
+                    <div style="margin-top: 10px">
+                        <a  id="a" class="font-14px-888" style="text-decoration: none;">{$b}</a>
+                    </div>
+                </volist>
+            </div>
+            <div style="width: 100%; height: 30px"></div>
+            <div>
+                <div class="text-left2"><span class="font-18px-333">筛选</span></div>
+                <div class="text-left3"><span class="font-14px-888">价格</span></div>
+                <div class="price">
+                    <input id="min" type="number" min="0" value="0">&nbsp;&nbsp;-&nbsp;&nbsp;<input id="max" type="number" min="0" value="9999">
+                </div>
+                <div class="text-left3"><span class="font-14px-888">类型</span></div>
+                <div class="type">
+                    <volist name="typedatas" id="t">
+                        <div style="margin-top: 10px;">
+                            <input type="radio" name="i" id="r{$t}">
+                            <label for="r{$t}"><a id="type" class="font-14px-888">{$t}</a></label>
+                        </div>
+                    </volist>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tool-bar">
+        <ul class="tools">
+            <li><a class="cart" href="cart"><img src="__PUBLIC__/images/首页图片/shape3.png"></a></li>
+            <li><a class="contact" href="../HelpCenter/index"><img src="__PUBLIC__/images/首页图片/shape1.png"></a></li>
+            <li><a class="backtop" href="#pagetop"><img src="__PUBLIC__/images/首页图片/shape2.png"></a></li>
+        </ul>
+    </div>
+
+    <div class="container-right">
+        <div class="left-title">
+            <div class="left-text font-18px-333">{$catename}&nbsp;&nbsp;/&nbsp;&nbsp;({$total})</div>
+            <div class="right-text">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        综合排序
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a id="priceAsc" href="#">价格升序</a></li>
+                        <li><a id="priceDesc" href="#">价格降序</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shoes-group">
+            <volist name="allproduct" id="p">
+                <div class="shoes-grid">
+                    <div class="shoes-pic">
+                        <a href="../Detail/Detail?productid={$p.productid}"><img  src="__ROOT__{$p.productimg}" width="98%" ></a>
+                    </div>
+                    <div class="shoes-name">
+                        <a href="../Detail/Detail?productid={$p.productid}" class="spf">{$p.productname}</a>
+                    </div>
+                    <div class="shoes-type simsun">
+                        {$p.brandname}&nbsp;{$p.typename}
+                    </div>
+                    <div class="shoes-price font-18px-333">
+                        ¥{$p.productprice}
+                    </div>
+                </div>
+            </volist>
+        </div>
+        <div style="width: 82.3%">
+            <nav aria-label="Page navigation" style="text-align: center;">
+                <ul class="pagination">
+                    <li>
+                        <a href="fenlei?page=1&catename={$p.catename}" aria-label="Previous">
+                            <span aria-hidden="true">首页</span>
+                        </a>
+                    </li>
+
+                    <for start="1" end="$pages+1" >
+                        <li><a href="fenlei?page={$i}&catename={$p.catename}">{$i}</a></li>
+                    </for>
+
+                    <li>
+                        <a href="fenlei?page={$pages}&catename={$p.catename}" aria-label="Next">
+                            <span aria-hidden="true">末页</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<!--<include file="Public/footer"/>-->
+<!--底部-->
+</body>
+</html>
+<script>
+    $(function () {
+        var arg=$("#catename").text();
+        if (arg=='男鞋') {
+            $(".nanxie").css("color","#c53e3b");
+        }
+        else {
+            $(".nvxie").css("color","#c53e3b");
+        }
+
+    });
+
+
+</script>
